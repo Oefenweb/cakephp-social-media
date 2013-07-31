@@ -38,7 +38,7 @@ class SocialMediaHelperTest extends CakeTestCase {
 
 	public function testFacebook() {
 		// Text link
-		$title = __('Share on Facebook');
+		$title = __d('social_media', 'Share on Facebook');
 		$urlParameters = array(
 			'link' => 'your-url',
 			'name' => 'your-name',
@@ -57,7 +57,7 @@ class SocialMediaHelperTest extends CakeTestCase {
 								'caption=your-caption&amp;' .
 								'description=your-description&amp;' .
 								'picture=your-picture' .
-								'">' . __('Share on Facebook') . '</a>';
+								'">' . __d('social_media', 'Share on Facebook') . '</a>';
 
 		$this->assertEqual($result, $expected);
 
@@ -89,7 +89,7 @@ class SocialMediaHelperTest extends CakeTestCase {
 
 	public function testHyves() {
 		// Text link
-		$title = __('Share on Hyves');
+		$title = __d('social_media', 'Share on Hyves');
 		$urlParameters = array(
 			'url' => 'your-url',
 			'title' => 'your-title',
@@ -101,7 +101,7 @@ class SocialMediaHelperTest extends CakeTestCase {
 		$expected = '<a href="http://www.hyves-share.nl/button/respect/?' .
 								'hc_hint=1&amp;' .
 								'url=' . urlencode(FULL_BASE_URL) . '%2Fsocial_media%2Fsocial_media%2Fdisplay%2Fcd33a621e2052efcf7cff474d6ea335f%2Furl%3AeW91ci11cmw%253D%2Ftitle%3AeW91ci10aXRsZQ%253D%253D%2Fdescription%3AeW91ci1kZXNjcmlwdGlvbg%253D%253D%2Fimage%3AeW91ci1pbWFnZQ%253D%253D' .
-								'">' . __('Share on Hyves') . '</a>';
+								'">' . __d('social_media', 'Share on Hyves') . '</a>';
 
 		$this->assertEqual($result, $expected);
 
@@ -120,6 +120,25 @@ class SocialMediaHelperTest extends CakeTestCase {
 								'hc_hint=1&amp;' .
 								'url=' . urlencode(FULL_BASE_URL) . '%2Fsocial_media%2Fsocial_media%2Fdisplay%2Fcd33a621e2052efcf7cff474d6ea335f%2Furl%3AeW91ci11cmw%253D%2Ftitle%3AeW91ci10aXRsZQ%253D%253D%2Fdescription%3AeW91ci1kZXNjcmlwdGlvbg%253D%253D%2Fimage%3AeW91ci1pbWFnZQ%253D%253D' .
 								'">' . '<img title="Hyves" src="/img/hyves.png">' . '</a>';
+
+		$this->assertEqual($result, $expected);
+	}
+
+	public function testTwitter() {
+		// Text link
+		$title = __d('social_media', 'Share on Twitter');
+		$urlParameters = array(
+			'url' => 'your-url',
+			'text' => 'your-text',
+			'via' => 'your-via'
+		);
+
+		$result = $this->SocialMedia->twitter($title, $urlParameters);
+		$expected = '<a href="https://twitter.com/share?' .
+								'url=your-url&amp;' .
+								'text=your-text&amp;' .
+								'via=your-via' .
+								'">' . __d('social_media', 'Share on Twitter') . '</a>';
 
 		$this->assertEqual($result, $expected);
 	}
