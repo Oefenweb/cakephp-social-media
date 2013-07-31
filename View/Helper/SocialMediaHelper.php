@@ -22,6 +22,12 @@ class SocialMediaHelper extends AppHelper {
 	const HYVES_RESPECT_URL = 'http://www.hyves-share.nl/button/respect/';
 
 /**
+ * A so called "tweet" url for Twitter.
+ *
+ */
+	const TWITTER_TWEET_URL = 'https://twitter.com/share';
+
+/**
  * An array of names of helpers to load.
  *
  * @var array
@@ -107,6 +113,34 @@ class SocialMediaHelper extends AppHelper {
 
 		return $this->Html->link(
 			$title, SocialMediaHelper::HYVES_RESPECT_URL . '?' . http_build_query($params), $options, $confirmMessage
+		);
+	}
+
+/**
+ * Creates a Twitter Tweet link.
+ *
+ *  - Url parameters:
+ *    - `url` URL of the page to share
+ *    - `via` Screen name of the user to attribute the Tweet to
+ *    - `text` Default Tweet text
+ *
+ *  - Options:
+ *    - `escape` Set to false to disable escaping of title and attributes.
+ *
+ * @param string $title The content to be wrapped by <a> tags.
+ * @param array $urlParameters An array of URL parameters
+ * @param array $options An array of HTML attributes.
+ * @param string $confirmMessage A javaScript confirmation message.
+ * @return string An `<a />` element.
+ */
+	public function twitter($title, $urlParameters = array(), $options = array(), $confirmMessage = false) {
+		$defaults = array(
+			'url' => $this->Html->url('', true)
+		);
+		$urlParameters = array_merge($defaults, $urlParameters);
+
+		return $this->Html->link(
+			$title, SocialMediaHelper::TWITTER_TWEET_URL . '?' . http_build_query($urlParameters), $options, $confirmMessage
 		);
 	}
 }
