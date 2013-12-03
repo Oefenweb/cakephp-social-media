@@ -16,12 +16,6 @@ class SocialMediaHelper extends AppHelper {
 	const FACEBOOK_FEED_DIALOG_URL = 'https://www.facebook.com/dialog/feed';
 
 /**
- * A so called "respect" url for Hyves.
- *
- */
-	const HYVES_RESPECT_URL = 'http://www.hyves-share.nl/button/respect/';
-
-/**
  * A so called "tweet" url for Twitter.
  *
  */
@@ -70,49 +64,6 @@ class SocialMediaHelper extends AppHelper {
 
 		return $this->Html->link(
 			$title, SocialMediaHelper::FACEBOOK_FEED_DIALOG_URL . '?' . http_build_query($urlParameters), $options, $confirmMessage
-		);
-	}
-
-/**
- * Creates a Hyves Respect HTML link.
- *
- *  - Url parameters:
- *    - `title` The title of the link.
- *    - `url` The link attached to this post.
- *    - `description` The description of the link.
- *    - `image` The URL of a picture attached to this post.
- *
- *  - Options:
- *    - `escape` Set to false to disable escaping of title and attributes.
- *
- * @param string $title The content to be wrapped by <a> tags.
- * @param array $urlParameters An array of URL parameters
- * @param array $options An array of HTML attributes.
- * @param string $confirmMessage A javaScript confirmation message.
- * @return string An `<a />` element.
- */
-	public function hyves($title, $urlParameters = array(), $options = array(), $confirmMessage = false) {
-		$defaults = array(
-			'url' => $this->Html->url('', true)
-		);
-		$urlParameters = array_merge($defaults, $urlParameters);
-
-		foreach ($urlParameters as $key => $value) {
-			$urlParameters[$key] = base64_encode($value);
-		}
-
-		$secret = Utility::secret($urlParameters);
-
-		$url = array('plugin' => 'social_media', 'controller' => 'social_media', 'action' => 'display', $secret);
-		$url = array_merge($url, $urlParameters);
-
-		$params = array(
-			'hc_hint' => 1,
-			'url' => $this->Html->url($url, true)
-		);
-
-		return $this->Html->link(
-			$title, SocialMediaHelper::HYVES_RESPECT_URL . '?' . http_build_query($params), $options, $confirmMessage
 		);
 	}
 

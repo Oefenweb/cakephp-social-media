@@ -42,16 +42,14 @@ echo $this->SocialMedia->facebook(
 );
 ```
 
-### Hyves respect link
+### Twitter tweet link
 
 ```
-echo $this->SocialMedia->hyves(
-	__('Respect on Hyves'), array(
+echo $this->SocialMedia->twitter(
+	__('Tweet on Twitter'), array(
 		'url' => 'your-url',
-		'title' => 'your-title',
-		'description' => 'your-description',
-		'image' => 'your-image'
+		'via' => 'your-via',
+		'text' => 'your-text',
 	)
 );
-
 ```
