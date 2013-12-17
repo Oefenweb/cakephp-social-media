@@ -1,4 +1,6 @@
-# SocialMedia plugin for CakePHP [![Build Status](https://travis-ci.org/Oefenweb/cakephp-social-media.png?branch=master)](https://travis-ci.org/Oefenweb/cakephp-social-media)
+# SocialMedia plugin for CakePHP
+
+[![Build Status](https://travis-ci.org/Oefenweb/cakephp-social-media.png?branch=master)](https://travis-ci.org/Oefenweb/cakephp-social-media) [![Coverage Status](https://coveralls.io/repos/Oefenweb/cakephp-social-media/badge.png)](https://coveralls.io/r/Oefenweb/cakephp-social-media)
 
 The SocialMedia plugin provides the tools to generate social media links (Helper) and handle them (Controller).
 
