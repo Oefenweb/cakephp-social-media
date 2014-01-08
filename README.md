@@ -7,7 +7,7 @@ The SocialMedia plugin provides the tools to generate social media links (Helper
 ## Requirements
 
 * CakePHP 2.0 or greater.
-* PHP 5.3.0 or greater.
+* PHP 5.3.10 or greater.
 
 ## Installation
 

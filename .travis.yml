@@ -27,7 +27,7 @@ matrix:
         - PHPCS=1
     - php: 5.3
       env:
-        - FOC_VALIDATE=0
+        - FOC_VALIDATE=1
 
 before_script:
   - git clone https://github.com/FriendsOfCake/travis.git --depth 1 ../travis
