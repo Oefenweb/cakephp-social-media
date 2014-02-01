@@ -45,13 +45,13 @@ class SocialMediaHelperTest extends CakeTestCase {
 			'caption' => 'your-caption',
 			'description' => 'your-description',
 			'picture' => 'your-picture',
-			'redirect_uri' => FULL_BASE_URL
+			'redirect_uri' => Configure::read('App.fullBaseUrl')
 		);
 
 		$result = $this->SocialMedia->facebook($title, $urlParameters);
 		$expected = '<a href="https://www.facebook.com/dialog/feed?' .
 								'app_id=505567138750925&amp;' .
-								'redirect_uri=' . urlencode(FULL_BASE_URL) . '&amp;' .
+								'redirect_uri=' . urlencode(Configure::read('App.fullBaseUrl')) . '&amp;' .
 								'link=your-url&amp;' .
 								'name=your-name&amp;' .
 								'caption=your-caption&amp;' .
@@ -69,14 +69,14 @@ class SocialMediaHelperTest extends CakeTestCase {
 			'caption' => 'your-caption',
 			'description' => 'your-description',
 			'picture' => 'your-picture',
-			'redirect_uri' => FULL_BASE_URL
+			'redirect_uri' => Configure::read('App.fullBaseUrl')
 		);
-		$options = array('escape' => false);
+		$options = array('escapeTitle' => false);
 
 		$result = $this->SocialMedia->facebook($title, $urlParameters, $options);
 		$expected = '<a href="https://www.facebook.com/dialog/feed?' .
 								'app_id=505567138750925&amp;' .
-								'redirect_uri=' . urlencode(FULL_BASE_URL) . '&amp;' .
+								'redirect_uri=' . urlencode(Configure::read('App.fullBaseUrl')) . '&amp;' .
 								'link=your-url&amp;' .
 								'name=your-name&amp;' .
 								'caption=your-caption&amp;' .
