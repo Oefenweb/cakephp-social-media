@@ -64,7 +64,7 @@ class SocialMediaHelperTest extends CakeTestCase {
 		$this->assertEqual($result, $expected);
 
 		// Image link
-		$title = '<img title="Facebook" src="/img/facebook.png">';
+		$image = '<img title="Facebook" src="/img/facebook.png">';
 		$urlParameters = array(
 			'link' => 'your-url',
 			'name' => 'your-name',
@@ -75,7 +75,7 @@ class SocialMediaHelperTest extends CakeTestCase {
 		);
 		$options = array('escape' => false, 'escapeTitle' => false);
 
-		$result = $this->SocialMedia->facebook($title, $urlParameters, $options);
+		$result = $this->SocialMedia->facebook($image, $urlParameters, $options);
 		$expected = '<a href="https://www.facebook.com/dialog/feed?' .
 								'app_id=505567138750925&amp;' .
 								'redirect_uri=' . urlencode($fullBaseUrl) . '&amp;' .
@@ -84,7 +84,7 @@ class SocialMediaHelperTest extends CakeTestCase {
 								'caption=your-caption&amp;' .
 								'description=your-description&amp;' .
 								'picture=your-picture' .
-								'">' . '<img title="Facebook" src="/img/facebook.png">' . '</a>';
+								'">' . $image . '</a>';
 
 		$this->assertEqual($result, $expected);
 	}
@@ -104,6 +104,24 @@ class SocialMediaHelperTest extends CakeTestCase {
 								'text=your-text&amp;' .
 								'via=your-via' .
 								'">' . __d('social_media', 'Share on Twitter') . '</a>';
+
+		$this->assertEqual($result, $expected);
+
+		// Image link
+		$image = '<img title="Twitter" src="/img/twitter.png">';
+		$urlParameters = array(
+			'url' => 'your-url',
+			'text' => 'your-text',
+			'via' => 'your-via'
+		);
+		$options = array('escape' => false, 'escapeTitle' => false);
+
+		$result = $this->SocialMedia->twitter($image, $urlParameters, $options);
+		$expected = '<a href="https://twitter.com/share?' .
+								'url=your-url&amp;' .
+								'text=your-text&amp;' .
+								'via=your-via' .
+								'">' . $image . '</a>';
 
 		$this->assertEqual($result, $expected);
 	}
