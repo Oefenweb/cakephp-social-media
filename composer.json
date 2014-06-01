@@ -1,28 +1,27 @@
 {
-  "name": "oefenweb/cakephp-social-media",
-  "version": "0.0.1",
-  "description": "A minimalistic SocialMedia Plugin for CakePHP",
-  "type": "cakephp-plugin",
-  "keywords": [
-    "cakephp", "social media"
-  ],
-  "homepage": "http://github.com/Oefenweb/cakephp-social-media",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Oefenweb",
-      "homepage": "https://github.com/Oefenweb/cakephp-social-media/contributors"
-    }
-  ],
-  "require": {
-    "php": ">=5.3.10",
-    "composer/installers": "*"
-  },
-  "support": {
-    "issues": "https://github.com/Oefenweb/cakephp-social-media/issues",
-    "source": "https://github.com/Oefenweb/cakephp-social-media"
-  },
-  "extra": {
-    "installer-name": "SocialMedia"
-  }
+	"name": "oefenweb/cakephp-social-media",
+	"description": "A minimalistic SocialMedia Plugin for CakePHP",
+	"type": "cakephp-plugin",
+	"keywords": [
+		"cakephp", "social media"
+	],
+	"homepage": "http://github.com/Oefenweb/cakephp-social-media",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Oefenweb.nl BV team",
+			"homepage": "https://github.com/Oefenweb/cakephp-social-media/contributors"
+		}
+	],
+	"require": {
+		"php": ">=5.3.10",
+		"composer/installers": "~1.0"
+	},
+	"support": {
+		"issues": "https://github.com/Oefenweb/cakephp-social-media/issues",
+		"source": "https://github.com/Oefenweb/cakephp-social-media"
+	},
+	"extra": {
+		"installer-name": "SocialMedia"
+	}
 }
