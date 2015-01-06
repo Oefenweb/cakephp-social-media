@@ -1,6 +1,6 @@
 # SocialMedia plugin for CakePHP
 
-[![Build Status](https://travis-ci.org/Oefenweb/cakephp-social-media.png?branch=master)](https://travis-ci.org/Oefenweb/cakephp-social-media) [![Coverage Status](https://coveralls.io/repos/Oefenweb/cakephp-social-media/badge.png)](https://coveralls.io/r/Oefenweb/cakephp-social-media) [![Packagist downloads](http://img.shields.io/packagist/dt/Oefenweb/cakephp-social-media.svg)](https://packagist.org/packages/oefenweb/cakephp-social-media)
+[![Build Status](https://travis-ci.org/Oefenweb/cakephp-social-media.png?branch=master)](https://travis-ci.org/Oefenweb/cakephp-social-media) [![Coverage Status](https://coveralls.io/repos/Oefenweb/cakephp-social-media/badge.png)](https://coveralls.io/r/Oefenweb/cakephp-social-media) [![Packagist downloads](http://img.shields.io/packagist/dt/Oefenweb/cakephp-social-media.svg)](https://packagist.org/packages/oefenweb/cakephp-social-media) [![Code Climate](https://codeclimate.com/github/Oefenweb/cakephp-social-media/badges/gpa.svg)](https://codeclimate.com/github/Oefenweb/cakephp-social-media)
 
 The SocialMedia plugin provides the tools to generate social media links (Helper) and handle them (Controller).
 
