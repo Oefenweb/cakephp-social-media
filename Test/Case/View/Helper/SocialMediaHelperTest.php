@@ -41,14 +41,14 @@ class SocialMediaHelperTest extends CakeTestCase {
 
 		// Text link
 		$title = __d('social_media', 'Share on Facebook');
-		$urlParameters = array(
+		$urlParameters = [
 			'link' => 'your-url',
 			'name' => 'your-name',
 			'caption' => 'your-caption',
 			'description' => 'your-description',
 			'picture' => 'your-picture',
 			'redirect_uri' => $fullBaseUrl
-		);
+		];
 
 		$result = $this->SocialMedia->facebook($title, $urlParameters);
 		$expected = '<a href="https://www.facebook.com/dialog/feed?' .
@@ -65,15 +65,15 @@ class SocialMediaHelperTest extends CakeTestCase {
 
 		// Image link
 		$image = '<img title="Facebook" src="/img/facebook.png">';
-		$urlParameters = array(
+		$urlParameters = [
 			'link' => 'your-url',
 			'name' => 'your-name',
 			'caption' => 'your-caption',
 			'description' => 'your-description',
 			'picture' => 'your-picture',
 			'redirect_uri' => $fullBaseUrl
-		);
-		$options = array('escape' => false, 'escapeTitle' => false);
+		];
+		$options = ['escape' => false, 'escapeTitle' => false];
 
 		$result = $this->SocialMedia->facebook($image, $urlParameters, $options);
 		$expected = '<a href="https://www.facebook.com/dialog/feed?' .
@@ -92,11 +92,11 @@ class SocialMediaHelperTest extends CakeTestCase {
 	public function testTwitter() {
 		// Text link
 		$title = __d('social_media', 'Share on Twitter');
-		$urlParameters = array(
+		$urlParameters = [
 			'url' => 'your-url',
 			'text' => 'your-text',
 			'via' => 'your-via'
-		);
+		];
 
 		$result = $this->SocialMedia->twitter($title, $urlParameters);
 		$expected = '<a href="https://twitter.com/share?' .
@@ -109,12 +109,12 @@ class SocialMediaHelperTest extends CakeTestCase {
 
 		// Image link
 		$image = '<img title="Twitter" src="/img/twitter.png">';
-		$urlParameters = array(
+		$urlParameters = [
 			'url' => 'your-url',
 			'text' => 'your-text',
 			'via' => 'your-via'
-		);
-		$options = array('escape' => false, 'escapeTitle' => false);
+		];
+		$options = ['escape' => false, 'escapeTitle' => false];
 
 		$result = $this->SocialMedia->twitter($image, $urlParameters, $options);
 		$expected = '<a href="https://twitter.com/share?' .

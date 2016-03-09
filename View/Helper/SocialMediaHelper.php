@@ -26,7 +26,7 @@ class SocialMediaHelper extends AppHelper {
  *
  * @var array
  */
-	public $helpers = array('Html');
+	public $helpers = ['Html'];
 
 /**
  * Creates a Facebook feed dialog link.
@@ -54,12 +54,12 @@ class SocialMediaHelper extends AppHelper {
  * @param string $confirmMessage A javaScript confirmation message.
  * @return string An `<a />` element.
  */
-	public function facebook($title, $urlParameters = array(), $options = array(), $confirmMessage = false) {
-		$defaults = array(
+	public function facebook($title, $urlParameters = [], $options = [], $confirmMessage = false) {
+		$defaults = [
 			'app_id' => Configure::read('SocialMedia.facebookAppId'),
 			'redirect_uri' => $this->Html->url('', true),
 			'link' => $this->Html->url('', true)
-		);
+		];
 		$urlParameters = array_merge($defaults, $urlParameters);
 
 		return $this->Html->link(
@@ -84,10 +84,10 @@ class SocialMediaHelper extends AppHelper {
  * @param string $confirmMessage A javaScript confirmation message.
  * @return string An `<a />` element.
  */
-	public function twitter($title, $urlParameters = array(), $options = array(), $confirmMessage = false) {
-		$defaults = array(
+	public function twitter($title, $urlParameters = [], $options = [], $confirmMessage = false) {
+		$defaults = [
 			'url' => $this->Html->url('', true)
-		);
+		];
 		$urlParameters = array_merge($defaults, $urlParameters);
 
 		return $this->Html->link(
