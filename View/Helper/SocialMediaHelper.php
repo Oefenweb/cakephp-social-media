@@ -54,7 +54,7 @@ class SocialMediaHelper extends AppHelper {
  * @param string $confirmMessage A javaScript confirmation message.
  * @return string An `<a />` element.
  */
-	public function facebook($title, $urlParameters = [], $options = [], $confirmMessage = false) {
+	public function facebook($title, $urlParameters = [], $options = [], $confirmMessage = '') {
 		$defaults = [
 			'app_id' => Configure::read('SocialMedia.facebookAppId'),
 			'redirect_uri' => $this->Html->url('', true),
@@ -84,7 +84,7 @@ class SocialMediaHelper extends AppHelper {
  * @param string $confirmMessage A javaScript confirmation message.
  * @return string An `<a />` element.
  */
-	public function twitter($title, $urlParameters = [], $options = [], $confirmMessage = false) {
+	public function twitter($title, $urlParameters = [], $options = [], $confirmMessage = '') {
 		$defaults = [
 			'url' => $this->Html->url('', true)
 		];
