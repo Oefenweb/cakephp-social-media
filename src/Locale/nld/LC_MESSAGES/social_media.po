@@ -4,23 +4,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SocialMedia Plugin\n"
-"POT-Creation-Date: 2014-03-19 11:45+0100\n"
-"PO-Revision-Date: 2014-03-19 11:47+0100\n"
-"Last-Translator: Mischa ter Smitten <m.tersmitten@oefenweb.nl>\n"
+"POT-Creation-Date: 2018-01-11 23:32+0100\n"
+"PO-Revision-Date: 2018-01-11 23:32+0100\n"
+"Last-Translator: Mischa ter Smitten <mtersmitten@oefenweb.nl>\n"
 "Language-Team: \n"
-"Language: \n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Poedit-Language: Dutch\n"
-"X-Poedit-Country: NETHERLANDS\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
-#: Test/Case/View/Helper/SocialMediaHelperTest.php:43;62
+#: TestCase/View/Helper/SocialMediaHelperTest.php:54;74
 msgid "Share on Facebook"
 msgstr "Delen op Facebook"
 
-#: Test/Case/View/Helper/SocialMediaHelperTest.php:94;106
+#: TestCase/View/Helper/SocialMediaHelperTest.php:115;128
 msgid "Share on Twitter"
 msgstr "Delen op Twitter"
-

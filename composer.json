@@ -1,27 +1,39 @@
 {
-	"name": "oefenweb/cakephp-social-media",
-	"description": "A minimalistic SocialMedia Plugin for CakePHP",
-	"type": "cakephp-plugin",
-	"keywords": [
-		"cakephp", "social media"
-	],
-	"homepage": "http://github.com/Oefenweb/cakephp-social-media",
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Oefenweb.nl BV team",
-			"homepage": "https://github.com/Oefenweb/cakephp-social-media/contributors"
-		}
-	],
-	"require": {
-		"php": ">=5.4.16",
-		"composer/installers": "~1.0"
-	},
-	"support": {
-		"issues": "https://github.com/Oefenweb/cakephp-social-media/issues",
-		"source": "https://github.com/Oefenweb/cakephp-social-media"
-	},
-	"extra": {
-		"installer-name": "SocialMedia"
-	}
+    "name": "oefenweb/cakephp-social-media",
+    "description": "A minimalistic SocialMedia Plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "keywords": [
+        "cakephp", "social media"
+    ],
+    "homepage": "http://github.com/Oefenweb/cakephp-social-media",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oefenweb.nl BV team",
+            "homepage": "https://github.com/Oefenweb/cakephp-social-media/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "composer/installers": "~1.0"
+    },
+    "require-dev": {
+        "oefenweb/cakephp-codesniffer": "^3.0.0",
+        "phpunit/phpunit": "^5.7|^6.0"
+    },
+    "support": {
+        "source": "https://github.com/Oefenweb/cakephp-social-media",
+        "issues": "https://github.com/Oefenweb/cakephp-social-media/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "SocialMedia\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SocialMedia\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
 }

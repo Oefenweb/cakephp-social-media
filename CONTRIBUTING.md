@@ -47,22 +47,21 @@ chance of keeping on top of things.
 ## Testcases and codesniffer
 
 SocialMedia tests requires [PHPUnit](http://www.phpunit.de/manual/current/en/installation.html)
-3.5 or higher. To run the testcases locally use the following command:
+5.7 or higher. To run the testcases locally use the following command:
 
-    ./lib/Cake/Console/cake test SocialMedia AllSocialMedia
+    vendor/bin/phpunit vendor/oefenweb/cakephp-social-media/tests/
 
 To run the sniffs for CakePHP coding standards
 
-    phpcs -p --extensions=php --standard=CakePHP ./app/Plugin/SocialMedia
+    vendor/bin/phpcs vendor/oefenweb/cakephp-social-media --standard=CakePHPOefenweb --extensions=ctp,php
 
-Check the [cakephp-codesniffer](https://github.com/cakephp/cakephp-codesniffer)
-repository to setup the CakePHP standard. The README contains installation info
+Check the [cakephp-codesniffer](https://github.com/Oefenweb/cakephp-codesniffer)
+repository to setup the CakePHPOefenweb standard. The README contains installation info
 for the sniff and phpcs.
-
 
 # Additional Resources
 
-* [CakePHP coding standards](http://book.cakephp.org/2.0/en/contributing/cakephp-coding-conventions.html)
+* [CakePHP coding standards](https://book.cakephp.org/3.0/en/contributing/cakephp-coding-conventions.html)
 * [Bug tracker](https://github.com/Oefenweb/cakephp-social-media/issues)
 * [General GitHub documentation](https://help.github.com/)
 * [GitHub pull request documentation](https://help.github.com/send-pull-requests/)
