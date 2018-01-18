@@ -7,7 +7,7 @@ use Cake\View\View;
 use SocialMedia\View\Helper\SocialMediaHelper;
 
 /**
- * SocialMediaHelper Test Case
+ * SocialMediaHelper Test Case.
  *
  */
 class SocialMediaHelperTest extends TestCase

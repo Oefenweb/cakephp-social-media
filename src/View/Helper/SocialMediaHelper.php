@@ -5,7 +5,7 @@ use Cake\Core\Configure;
 use Cake\View\Helper;
 
 /**
- * Social Media helper
+ * Social Media helper.
  *
  * @property HtmlHelper $Html
  */
@@ -71,7 +71,7 @@ class SocialMediaHelper extends Helper
                 '_scheme' => $scheme,
                 '_host' => preg_replace('|^' . $scheme . '://|', '', static::FACEBOOK_FEED_DIALOG_URL),
                 '?' => array_merge($defaults, $urlParameters)
-            ], $options, $confirmMessage);
+        ], $options, $confirmMessage);
     }
 
     /**
@@ -101,6 +101,6 @@ class SocialMediaHelper extends Helper
                 '_scheme' => $scheme,
                 '_host' => preg_replace('|^' . $scheme . '://|', '', static::TWITTER_TWEET_URL),
                 '?' => array_merge($defaults, $urlParameters)
-            ], $options, $confirmMessage);
+        ], $options, $confirmMessage);
     }
 }
