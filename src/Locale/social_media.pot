@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2014-03-19 11:45+0100\n"
+"POT-Creation-Date: 2018-01-11 23:29+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,11 +14,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Test/Case/View/Helper/SocialMediaHelperTest.php:43;62
+#: TestCase/View/Helper/SocialMediaHelperTest.php:54;74
 msgid "Share on Facebook"
 msgstr ""
 
-#: Test/Case/View/Helper/SocialMediaHelperTest.php:94;106
+#: TestCase/View/Helper/SocialMediaHelperTest.php:115;128
 msgid "Share on Twitter"
 msgstr ""
 

@@ -6,24 +6,32 @@ The SocialMedia plugin provides the tools to generate social media links (Helper
 
 ## Requirements
 
-* CakePHP 2.6.0 or greater.
-* PHP 5.4.16 or greater.
+* CakePHP 3.5.* or greater.
+* PHP 7.1.0 or greater.
 
 ## Installation
 
-* Clone/Copy the files in this directory into `app/Plugin/SocialMedia`
+Clone/Copy the files in this directory into `plugin/SocialMedia`
+
+```sh
+git@github.com:Oefenweb/cakephp-social-media.git plugin/SocialMedia;
+```
+
+Or even better, use `composer`.
 
 ## Configuration
 
-* Ensure the plugin is loaded in `app/Config/bootstrap.php` by calling:
+Ensure the plugin is loaded in `config/bootstrap.php` by calling:
 
-```
-CakePlugin::load('SocialMedia');
+```php
+<?php
+Plugin::load('SocialMedia');
 ```
 
-* Ensure to configure the following two lines in `app/Config/bootstrap.php`:
+Ensure to configure the following lines in `config/bootstrap.php`:
 
-```
+```php
+<?php
 Configure::write('SocialMedia.salt', 'your-salt');
 Configure::write('SocialMedia.facebookAppId', 'your-facebook-app-id');
 ```
@@ -32,7 +40,8 @@ Configure::write('SocialMedia.facebookAppId', 'your-facebook-app-id');
 
 ### Facebook share link
 
-```
+```php
+<?php
 echo $this->SocialMedia->facebook(
 	__('Share on Facebook'), array(
 		'link' => 'your-url',
@@ -46,7 +55,8 @@ echo $this->SocialMedia->facebook(
 
 ### Twitter tweet link
 
-```
+```php
+<?php
 echo $this->SocialMedia->twitter(
 	__('Tweet on Twitter'), array(
 		'url' => 'your-url',
