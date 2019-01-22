@@ -1,11 +1,9 @@
 language: php
 
 php:
-  - 5.4
-  - 5.5
-  - 5.6
   - 7.0
   - 7.1
+  - 7.2
 
 env:
   global:
@@ -14,18 +12,17 @@ env:
     - REQUIRE=""
     - DB=mysql CAKE_VERSION=2
 
+    - secure: "gj+FR114LBlLQtTC2s6TluMPO0GaMlWXlnG30+HByXqUTfdHS0thRYnvfHgYw3Ct8OZwZEpvpQuW9YV7C2RNVLz5qVKdGvVLkUBAvT5Ip7L5gHYO3crbLq4u3cNTIA/7iUjtfsCu2lgL11A6WihhG7gUnWgQJxlToeZt+NOHiz4="
+
   matrix:
-    - DB=mysql CAKE_VERSION=2.6
-    - DB=mysql CAKE_VERSION=2.7
-    - DB=mysql CAKE_VERSION=2.8
-    - DB=mysql CAKE_VERSION=2.9
-    - DB=mysql CAKE_VERSION=2.10
+    - CAKE_VERSION=2.9
+    - CAKE_VERSION=2.10 PHPUNIT_VERSION=^5.7
 
 matrix:
   include:
     - php: 7.1
       env:
-        - CODECOVERAGE=1
+        - CODECOVERAGE=1 PHPUNIT_VERSION=^5.7
     - php: 7.1
       env:
         - PHPCS=1
@@ -33,18 +30,8 @@ matrix:
       env:
         - FOC_VALIDATE=1
   exclude:
-    - php: 7.0
-      env: DB=mysql CAKE_VERSION=2.6
-    - php: 7.0
-      env: DB=mysql CAKE_VERSION=2.7
-    - php: 7.0
-      env: DB=mysql CAKE_VERSION=2.8
-    - php: 7.1
-      env: DB=mysql CAKE_VERSION=2.6
-    - php: 7.1
-      env: DB=mysql CAKE_VERSION=2.7
-    - php: 7.1
-      env: DB=mysql CAKE_VERSION=2.8
+    - php: 7.2
+      env: CAKE_VERSION=2.9
 
 branches:
   only:
